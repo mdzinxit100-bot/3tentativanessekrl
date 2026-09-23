@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Eletrônicos & Tecnologia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">Tech<span>Store</span></h1>
+            <nav>
+                <a href="#produtos">Produtos</a>
+                <a href="#sobre">Sobre Nós</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- BANNER PRINCIPAL -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h2>As Melhores Ofertas em Eletrônicos</h2>
+            <p>Smartphones, acessórios, áudio e muito mais com entrega rápida.</p>
+            <a href="#produtos" class="btn">Ver Produtos</a>
+        </div>
+    </section>
+
+    <!-- VITRINE DE PRODUTOS -->
+    <main class="container" id="produtos">
+        <h2 class="section-title">Produtos em Destaque</h2>
+        
+        <div class="product-grid">
+            <!-- Produto 1 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/250x200?text=Smartphone+XYZ" alt="Smartphone">
+                <h3>Smartphone XYZ 128GB</h3>
+                <p class="price">R$ 1.899,00</p>
+                <button onclick="addToCart('Smartphone XYZ 128GB', 1899)">Adicionar ao Carrinho</button>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/250x200?text=Fone+Bluetooth" alt="Fone de Ouvido">
+                <h3>Fone de Ouvido Bluetooth Pro</h3>
+                <p class="price">R$ 249,00</p>
+                <button onclick="addToCart('Fone de Ouvido Bluetooth Pro', 249)">Adicionar ao Carrinho</button>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/250x200?text=Smartwatch" alt="Smartwatch">
+                <h3>Smartwatch Sport Fit</h3>
+                <p class="price">R$ 399,00</p>
+                <button onclick="addToCart('Smartwatch Sport Fit', 399)">Adicionar ao Carrinho</button>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/250x200?text=Carregador+Rápido" alt="Carregador">
+                <h3>Carregador Rápido USB-C 30W</h3>
+                <p class="price">R$ 89,00</p>
+                <button onclick="addToCart('Carregador Rápido USB-C 30W', 89)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- ABA LATERAL DO CARRINHO (SIDEBAR) -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Seu Carrinho</h3>
+            <button onclick="toggleCart()">X</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Itens adicionados aparecem aqui -->
+        </div>
+        <div class="cart-footer">
+            <p>Total: <strong>R$ <span id="cartTotal">0.00</span></strong></p>
+            <button class="btn-checkout" onclick="checkoutWhatsApp()">Finalizar no WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container footer-content" id="contato">
+            <p>&copy; 2026 TechStore - Todos os direitos reservados.</p>
+            <p>Atendimento: (00) 99999-9999 | contato@techstore.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
