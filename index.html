@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore | Eletrônicos & Tecnologia</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+        }
+
+        header {
+            background-color: var(--dark);
+            color: white;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: var(--dark);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .card-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+
+        .btn {
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: auto;
+            display: block;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #128c7e;
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Tech<span>Store</span></a>
+    </header>
+
+    <section class="hero">
+        <h1>O Melhor da Tecnologia para Você</h1>
+        <p>Eletrônicos, gadgets e acessórios com entrega rápida e garantia.</p>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title">Produtos em Destaque</h2>
+        
+        <div class="grid">
+            <!-- Produto 1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="Fone de Ouvido Bluetooth">
+                <div class="card-body">
+                    <h3 class="card-title">Fone de Ouvido Bluetooth Premium</h3>
+                    <p>Som de alta definição com cancelamento ativo de ruído.</p>
+                    <div class="card-price">R$ 299,00</div>
+                    <!-- Substitua o número 5500000000000 pelo seu WhatsApp -->
+                    <a href="https://wa.me/5500000000000?text=Olá,%20tenho%20interesse%20no%20Fone%20de%20Ouvido" class="btn" target="_blank">Comprar no WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Smartwatch Sport">
+                <div class="card-body">
+                    <h3 class="card-title">Smartwatch Sport Monitor</h3>
+                    <p>Acompanhe seus treinos, batimentos cardíacos e notificações.</p>
+                    <div class="card-price">R$ 199,00</div>
+                    <a href="https://wa.me/5500000000000?text=Olá,%20tenho%20interesse%20no%20Smartwatch" class="btn" target="_blank">Comprar no WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1608248597260-a4a3501b199c?auto=format&fit=crop&w=600&q=80" alt="Carregador Indução">
+                <div class="card-body">
+                    <h3 class="card-title">Carregador Sem Fio Fast Charge</h3>
+                    <p>Carregamento rápido por indução compatível com iOS e Android.</p>
+                    <div class="card-price">R$ 89,00</div>
+                    <a href="https://wa.me/5500000000000?text=Olá,%20tenho%20interesse%20no%20Carregador" class="btn" target="_blank">Comprar no WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TechStore - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
